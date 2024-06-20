@@ -20,17 +20,16 @@ namespace ShapesLibrary.Shapes
 
 		public double SideC { get; set; }
 
-
 		public double GetArea()
 		{
 			var halfPerimeter = (SideA + SideB + SideC) / 2;
 
-			var area = Math.Sqrt(halfPerimeter *
-					  (halfPerimeter - SideA) *
-					  (halfPerimeter - SideB) *
-					  (halfPerimeter - SideC));
-
-			return area;
+			return Math.Sqrt(
+				halfPerimeter *
+				(halfPerimeter - SideA) *
+				(halfPerimeter - SideB) *
+				(halfPerimeter - SideC)
+				);
 		}
 
 		public bool TriangleIsRight()

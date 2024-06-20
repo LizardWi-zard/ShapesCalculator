@@ -5,7 +5,7 @@ namespace ShapesLibrary.Tests
 	public class CircleTests
 	{
 		[Test]
-		public void GetArea_Correct()
+		public void GetArea_Correct_Test()
 		{
 			var radius = 5.0;
 			var expectedArea = Math.Pow(radius, 2) * Math.PI;
@@ -17,7 +17,7 @@ namespace ShapesLibrary.Tests
 		}
 
 		[Test]
-		public void ZeroRadius_Exception()
+		public void Constructor_ZeroRadius_Exception_Test()
 		{
 			var radius = 0.0;
 
@@ -27,18 +27,13 @@ namespace ShapesLibrary.Tests
 		}
 
 		[Test]
-		public void NegativeRadius_Exception()
+		public void Constructor_NegativeRadius_Exception_Test()
 		{
 			var radius = -10.0;
 
 			var result = Assert.Throws<ArgumentException>(() => new Circle(radius));
 
 			Assert.AreEqual(result.Message, "Radius should not be negative or zero.");
-		}
-
-		[SetUp]
-		public void Setup()
-		{
 		}
 	}
 }

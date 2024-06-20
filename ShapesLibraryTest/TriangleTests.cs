@@ -5,7 +5,7 @@ namespace ShapesLibrary.Tests
 	internal class TriangleTests
 	{
 		[Test]
-		public void GetArea_AreaIsCorrect()
+		public void GetArea_AreaIsCorrect_Test()
 		{
 			var expectedHalfPerimeter = (5.0 + 4.0 + 7.0) / 2;
 			var expectedArea = Math.Sqrt(expectedHalfPerimeter *
@@ -20,7 +20,7 @@ namespace ShapesLibrary.Tests
 		}
 
 		[Test]
-		public void TriangleIsRight_Correct()
+		public void TriangleIsRight_Correct_Test()
 		{
 			var target = new Triangle(3.0, 4.0, 5.0);
 
@@ -30,7 +30,7 @@ namespace ShapesLibrary.Tests
 		}
 
 		[Test]
-		public void TriangleIsRight_NotCorrect()
+		public void TriangleIsRight_NotCorrect_Test()
 		{
 			var target = new Triangle(4.0, 4.0, 5.0);
 
@@ -40,7 +40,7 @@ namespace ShapesLibrary.Tests
 		}
 
 		[Test]
-		public void InvalidSides_Exception()
+		public void Constructor_InvalidSides_Exception_Test()
 		{
 			var result = Assert.Throws<ArgumentException>(() => new Triangle(1.0, 2.0, 3.0));
 
@@ -49,7 +49,7 @@ namespace ShapesLibrary.Tests
 		}
 
 		[Test]
-		public void ZeroSides_Exception()
+		public void Constructor_ZeroSides_Exception_Test()
 		{
 			var result = Assert.Throws<ArgumentException>(() => new Triangle(0.0, 2.0, 3.0));
 
@@ -58,17 +58,11 @@ namespace ShapesLibrary.Tests
 		}
 
 		[Test]
-		public void NegativeSides_Exception()
+		public void Constructor_NegativeSides_Exception_Test()
 		{
 			var result = Assert.Throws<ArgumentException>(() => new Triangle(1.0, -2.0, 3.0));
 
 			Assert.AreEqual(result.Message, "Sides should not be negative or zero.");
-
-		}
-
-		[SetUp]
-		public void Setup()
-		{
 		}
 	}
 }

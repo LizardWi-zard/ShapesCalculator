@@ -4,8 +4,6 @@ namespace ShapesLibrary.Shapes
 {
 	public class Circle : IShape
 	{
-		public double Radius { get; set; }
-
 		public Circle(double radius)
 		{
 			if (IsRadiusValid(radius))
@@ -14,14 +12,14 @@ namespace ShapesLibrary.Shapes
 			}
 		}
 
+		public double Radius { get; set; }
+
 		public double GetArea()
 		{
-			var area = Math.Pow(Radius, 2) * Math.PI;
-
-			return area;
+			return Math.Pow(Radius, 2) * Math.PI;
 		}
 
-		public bool IsRadiusValid(double radius)
+		private bool IsRadiusValid(double radius)
 		{
 			if (radius <= 0)
 			{
