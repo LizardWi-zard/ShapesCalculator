@@ -1,24 +1,17 @@
 ﻿using ShapesLibrary.Abstraction;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShapesLibrary.Shapes
 {
-	internal class Circle : IShape
+	public class Circle : IShape
 	{
 		public double Radius { get; set; }
 
 		public Circle(double radius)
 		{
-			if (radius <= 0)
+			if (IsRadiusValid(radius))
 			{
-				throw new ArgumentException();
+				Radius = radius;
 			}
-
-			Radius = radius;
 		}
 
 		public double GetArea()
@@ -26,6 +19,16 @@ namespace ShapesLibrary.Shapes
 			var area = Math.Pow(Radius, 2) * Math.PI;
 
 			return area;
+		}
+
+		public bool IsRadiusValid(double radius)
+		{
+			if (radius <= 0)
+			{
+				throw new ArgumentException($"{nameof(Radius)} should not be negative or zero.");
+			}
+
+			return true;
 		}
 	}
 }
