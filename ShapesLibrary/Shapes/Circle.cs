@@ -25,7 +25,7 @@ namespace ShapesLibrary.Shapes
 		{
 			if (radius <= 0)
 			{
-				throw new ArgumentException($"{nameof(Radius)} should not be negative or zero.");
+				throw new ArgumentException($"Radius should not be negative or zero.");
 			}
 
 			return true;
