@@ -1,7 +1,7 @@
 ﻿namespace ShapesLibrary.Abstraction
 {
 	/// <summary>
-	/// Интерфейс описания фигуры
+	/// Описывает фигуру
 	/// </summary>
 	public interface IShape
 	{

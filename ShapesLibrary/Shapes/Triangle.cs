@@ -48,7 +48,7 @@ namespace ShapesLibrary.Shapes
 		/// Проверка на прямоугольный треугольник
 		/// </summary>
 		/// <returns>
-		/// Вернет если треугольник прямоугольный
+		/// Вернет true если треугольник прямоугольный
 		/// </returns>
 		public bool TriangleIsRight()
 		{
