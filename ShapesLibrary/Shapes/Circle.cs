@@ -10,7 +10,9 @@ namespace ShapesLibrary.Shapes
 		/// <summary>
 		/// Создает объект круга
 		/// </summary>
-		/// <param name="radius"></param>
+		/// <param name="radius">
+		/// Радиус круга
+		/// </param>
 		public Circle(double radius)
 		{
 			if (IsRadiusValid(radius))

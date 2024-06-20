@@ -47,7 +47,9 @@ namespace ShapesLibrary.Shapes
 		/// <summary>
 		/// Проверка на прямоугольный треугольник
 		/// </summary>
-		/// <returns></returns>
+		/// <returns>
+		/// Вернет если треугольник прямоугольный
+		/// </returns>
 		public bool TriangleIsRight()
 		{
 			var sides = new[] { SideA, SideB, SideC };
