@@ -2,8 +2,15 @@
 
 namespace ShapesLibrary.Shapes
 {
+	/// <summary>
+	/// Представляет круг
+	/// </summary>
 	public class Circle : IShape
 	{
+		/// <summary>
+		/// Создает объект круга
+		/// </summary>
+		/// <param name="radius"></param>
 		public Circle(double radius)
 		{
 			if (IsRadiusValid(radius))
@@ -12,8 +19,17 @@ namespace ShapesLibrary.Shapes
 			}
 		}
 
+		/// <summary>
+		/// Радиус круга
+		/// </summary>
 		public double Radius { get; set; }
 
+		/// <summary>
+		/// Метод подсчета площади круга
+		/// </summary>
+		/// <returns>
+		/// Площадь по формуле S = π ⋅ R 2
+		/// </returns>
 		public double GetArea()
 		{
 			return Math.Pow(Radius, 2) * Math.PI;

@@ -1,0 +1,10 @@
+SELECT 
+     [Products].[Name], [Categories].[Name]
+FROM 
+    [Products] 
+LEFT JOIN 
+    [Connection] ON [Products].[Id] = [Connection].[ProductsId] 
+LEFT JOIN 
+    [Categories] ON [Connection].[CategoriesId] = [Categories].[Id]
+ORDER BY 
+     [Products].[Name], [Categories].[Name]

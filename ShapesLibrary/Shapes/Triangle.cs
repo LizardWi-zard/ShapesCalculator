@@ -2,8 +2,14 @@
 
 namespace ShapesLibrary.Shapes
 {
+	/// <summary>
+	/// Представляет  треугольник
+	/// </summary>
 	public class Triangle : IShape
 	{
+		/// <summary>
+		/// Создаёт объект треугольник
+		/// </summary>
 		public Triangle(double sideA, double sideB, double sideC)
 		{
 			if (SidesAreValid(sideA, sideB, sideC) && TriangleIsValid(sideA, sideB, sideC))
@@ -20,6 +26,12 @@ namespace ShapesLibrary.Shapes
 
 		public double SideC { get; set; }
 
+		/// <summary>
+		/// Метод подсчета площади
+		/// </summary>
+		/// <returns>
+		/// Площадь по формуле Герона
+		/// </returns>
 		public double GetArea()
 		{
 			var halfPerimeter = (SideA + SideB + SideC) / 2;
@@ -32,6 +44,10 @@ namespace ShapesLibrary.Shapes
 				);
 		}
 
+		/// <summary>
+		/// Проверка на прямоугольный треугольник
+		/// </summary>
+		/// <returns></returns>
 		public bool TriangleIsRight()
 		{
 			var sides = new[] { SideA, SideB, SideC };
