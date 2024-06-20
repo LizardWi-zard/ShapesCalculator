@@ -1,5 +1,4 @@
 ﻿using ShapesLibrary.Abstraction;
-using System.Runtime.CompilerServices;
 
 namespace ShapesLibrary.Shapes
 {
